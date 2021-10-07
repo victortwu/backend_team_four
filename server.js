@@ -5,6 +5,10 @@ const app = express()
 const cors = require('cors')
 const PORT = process.env.PORT
 
+const session = require('express-session')
+
+
+
 // database setup
 const mongoose = require('mongoose')
 
@@ -25,15 +29,14 @@ db.on('connected', ()=> { console.log('CONNECTED TO MONGO')})
 db.on('disconnected', ()=> {console.log('disconnected...')})
 
 
+app.use(express.json())
 
-app.get('/test', (req, res)=> {
-  res.send('Hello there')
-})
 
-app.get('/test/:name', (req, res)=> {
-  console.log(req.params)
-  res.send(`My name is ${req.params.name}.`)
-})
+
+// routes
+
+const userController = require('./controllers/userController')
+app.use('/users', userController)
 
 app.listen(PORT, ()=> {
   console.log(`listening on ${PORT}...`)
