@@ -38,18 +38,14 @@ user.post('/new', (req, res)=> {
 // get a specific user
 
 user.get('/:id', (req, res)=> {
-  console.log('Trying to get one')
   User.findById(req.params.id, (err, foundUser)=> {
     if(err){
-      console.log('is there a prob?', err)
       res.status(400).json(err)
     } else {
       res.status(200).json(foundUser)
     }
   })
 })
-
-
 
 // delete user
 
@@ -78,5 +74,6 @@ user.put('/:id', (req, res)=> {
     }
   })
 })
+
 
 module.exports = user
