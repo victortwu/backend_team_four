@@ -7,6 +7,25 @@ const PORT = process.env.PORT
 
 const session = require('express-session')
 
+// middleware
+
+app.use(express.json())
+
+//cors middleware
+
+// const whitelist = ['http://localhost:3000']
+// const corsOptions = {
+// 	origin: (origin, callback) => {
+// 		if (whitelist.indexOf(origin) !== -1) {
+// 			callback(null, true)
+// 		} else {
+// 			callback(new Error('Not allowed by CORS'))
+// 		}
+// 	}
+// }
+
+app.use(cors())
+
 // database setup
 const mongoose = require('mongoose')
 
@@ -26,9 +45,7 @@ db.on('error', (err)=> { console.log('ERROR: ', err)})
 db.on('connected', ()=> { console.log('CONNECTED TO MONGO')})
 db.on('disconnected', ()=> {console.log('disconnected...')})
 
-// middleware
 
-app.use(express.json())
 
 
 

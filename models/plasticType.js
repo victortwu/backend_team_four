@@ -3,6 +3,7 @@ const { Schema, model } = mongoose
 
 const plasticTypeSchema = new Schema({
   recycleNumber: String,
+  generalDescription: String,
   recycleInfoOptionOne: String,
   recycleInfoOptionTwo: String,
   recycleImages: [{type: String}]
