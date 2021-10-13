@@ -3,7 +3,6 @@ const pType = express.Router()
 const PlasticType = require('../models/plasticType.js')
 
 
-
 // GET ALL route
 
 pType.get('/', (req, res)=> {
@@ -61,7 +60,6 @@ pType.delete('/:id', (req, res) => {
     if(err) {
       res.status(400).json(err)
     } else {
-      console.log('Do I get a response?')
       res.status(200).json(`${deletedData} has been successfully deleted.`)
     }
   })

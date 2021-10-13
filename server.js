@@ -60,6 +60,9 @@ app.use('/plastics', plasticTypeController)
 const upcController = require('./controllers/upcController')
 app.use('/upc', upcController)
 
+const plasticTypeSeedData = require('./controllers/plasticTypeSeedData')
+app.use('/seed', plasticTypeSeedData)
+
 
 
 app.listen(PORT, ()=> {
