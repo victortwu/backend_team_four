@@ -3,6 +3,7 @@ require('dotenv').config()
 const express = require('express')
 const app = express()
 const cors = require('cors')
+
 const PORT = process.env.PORT
 
 const session = require('express-session')
@@ -47,15 +48,17 @@ db.on('disconnected', ()=> {console.log('disconnected...')})
 
 
 
-
-
 // routes
+
 
 const userController = require('./controllers/userController')
 app.use('/users', userController)
 
 const plasticTypeController = require('./controllers/plasticTypeController')
 app.use('/plastics', plasticTypeController)
+
+const upcController = require('./controllers/upcController')
+app.use('/upc', upcController)
 
 
 
