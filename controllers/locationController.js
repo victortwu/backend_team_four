@@ -1,18 +1,18 @@
 const express = require('express')
-const location = express.Router()
+const locations = express.Router()
 const axios = require('axios')
 
 const locationEarth911URL = process.env.LOCATIONS_EARTHURL
-const upcEarthApiKey = '&api_gkey=' + process.env.RECYCLE_APIKEY
+const upcEarthApiKey = '&api_key=' + process.env.RECYCLE_APIKEY
 
-location.get('/:latitude/:longitude/:materials', async(req, res) => {
+locations.get('/:latitude/:longitude/:materials', async(req, res) => {
       try{
 
-        const latitude = req.params.location
+        const latitude = req.params.latitude
         const longitude = req.params.longitude
         const materials = req.params.materials
 
-        axios.get(upcEarth911URL + `latitude=${latitude}&longitude=${longitude}` + upcEarthApiKey)
+        axios.get(locationEarth911URL +`latitude=${latitude}&longitude=${longitude}&max_distance=25`+upcEarthApiKey)
         .then(res => {
           console.log(res)
           return res.data
@@ -31,4 +31,4 @@ location.get('/:latitude/:longitude/:materials', async(req, res) => {
 
 
 
-module.exports = upc
+module.exports = locations
