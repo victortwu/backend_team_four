@@ -61,6 +61,9 @@ app.use('/plastics', plasticTypeController)
 const upcController = require('./controllers/upcController')
 app.use('/upc', upcController)
 
+const locationController = require('./controllers/locationController')
+app.use('/locations',locationController)
+
 const plasticTypeSeedData = require('./controllers/plasticTypeSeedData')
 app.use('/seed', plasticTypeSeedData)
 
