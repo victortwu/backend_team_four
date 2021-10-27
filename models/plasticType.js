@@ -9,8 +9,8 @@ const plasticTypeSchema = new Schema({
   canRecycle: String,
   recycleInfoOne: String,
   recycleInfoTwo: String,
-  productExamples: String, // <--- should be an array in the future
-  recycledExamples: String, // <--- should be an array in the future
+  productExamples: [], // <--- should be an array in the future
+  recycledExamples: [], // <--- should be an array in the future
   extraInfoPartOne: String,
   extraInfoPartTwo:  String,
   percentRecycled2015: Number,

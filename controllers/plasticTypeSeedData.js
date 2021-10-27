@@ -25,25 +25,33 @@ seed.get('/', (req, res) => {
       recycleNumber: '2',    //-------- TWO
       recycleCode: 'HDPE',
       plasticName: 'high-density polyethylene',
-      generalDescription: 'General description 2',
-      canRecycle: 'Yes',
-      recycleInfoOne: 'Most areas recycle #2',
-      recycleInfoTwo: 'Contact your local recycling company for more info',
-      productExamples: 'cleaning agents, milk, detergents, washing soap',
-      recycledExamples: 'pipes, oil bottles, pens, detergent bottles',
-      recycleImages: []
+      generalDescription: 'high-density polyethylene is a linear version of polyethylene, a light versatile synthetic resin made from the polymerization of ethylene.',
+      canRecycle: 'Yes!',
+      recycleInfoOne: 'In most areas this type of plastic is reclyclable.',
+      recycleInfoTwo: 'Fortunately, HDPE plastic is easily recyclable, helping keep non-biodegradable waste out of landfills, while helping reduce plastic production by up to 50 percent! Source: https://www.acmeplastics.com/what-is-hdpe',
+      productExamples: ['milk jugs', 'shampoo bottles', 'butter and yogurt tubs', 'bags inside cereal boxes', 'motor oil bottles', 'shopping bags', 'trash bags', 'household cleaners'],
+      recycledExamples: ['Laundry detergent bottles', 'oil bottles', 'pens', 'recycling containers', 'floor tile', 'drainage pipe', 'lumber', 'benches', 'doghouses', 'picnic tables', 'fencing', 'shampoo bottles'],
+      extraInfoPartOne: 'HDPE plastic is the stiff plastic used to make milk jugs, detergent and oil bottles, toys, and some plastic bags. HDPE is the most commonly recycled plastic and is considered one of the safest forms of plastic. It is a relatively simple and cost-effective process to recycle HDPE plastic for secondary use.',
+      extraInfoPartTwo:  'HDPE plastic is very hard-wearing and does not break down under exposure to sunlight or extremes of heating or freezing. For this reason, HDPE is used to make picnic tables, plastic lumber, waste bins, park benches, bed liners for trucks and other products which require durability and weather-resistance.',
+      percentRecycled2015: 10.3,
+      howToDetail: "HDPE can often be picked up through most curbside recycling programs, although some allow only containers with necks. Flimsy plastics (like grocery bags and plastic wrap) usually can't be recycled, but some stores will collect and recycle them.",
+      randomFactoid: 'Only 8% of discarded plastics were recycled in 2017, according to the EPA.'
     },
     {
       recycleNumber: '3',    //-------- THREE
       recycleCode: 'V',
-      plasticName: 'polyvinyl chloride',
-      generalDescription: 'General description 3',
-      canRecycle: 'No',
-      recycleInfoOne: 'This type of plastic is rarely recycled',
-      recycleInfoTwo: 'Contact your local recycling company for more info',
-      productExamples: 'bubble foils, trays for sweets and fruit',
-      recycledExamples: 'speed bumps, roadway gutters, cables',
-      recycleImages: []
+      plasticName: 'Vinyl or polyvinyl chloride',
+      generalDescription: 'Polyvinyl chloride or PVC plastic is a bit different from other plastics in that it has chlorine as one of its main ingredients. The chlorine is mixed with hydrocarbons to form a monomer called vinyl chloride. This is then polymerized to form polyvinyl chloride.',
+      canRecycle: 'Probably not.',
+      recycleInfoOne: 'Vinyl and PVC are rarely recycled though some other prodcuts made from plastic #3 can be recycled.',
+      recycleInfoTwo: 'Due to the difficulty in recycling PCV, number 3 is rarely collected and processed in recycling facilities. When it can be recycled, a small percentage can be used to make blinders, mats, cables, flooring, speed bumps, flooring, and roadway gutters. Source: https://www.thebalancesmb.com/what-recycling-symbols-mean-4126251',
+      productExamples: ['piping', 'siding', 'medical equipment', 'some clear food containers', 'detergent and shampoo bottles'],
+      recycledExamples: ['Decks', 'paneling', 'mud-flaps', 'roadway gutters', 'flooring', 'cables', 'speed bumps', 'mats'],
+      extraInfoPartOne: "PVC is dubbed the “poison plastic” because it contains numerous toxins which it can leach throughout its entire life cycle. Almost all products using PVC require virgin material for their construction; less than 1% of PVC material is recycled.",
+      extraInfoPartTwo:  "Products made using PVC plastic are not recyclable. While some PCV products can be repurposed, PVC products should not be reused for applications with food or for children’s use.",
+      percentRecycled2015: 0,
+      howToDetail: "PVC and Vinyl can rarely be recycled, but it's accepted by some plastic lumber makers. If you need to dispose of either material, ask your local waste management to see if you should put it in the trash or drop it off at a collection center.",
+      randomFactoid: 'According to the National Waste & Recycling Association, 25% of what ends up in recycling bins is contaminated and must be thrown out.'
     },
     {
       recycleNumber: '4',    //-------- FOUR
@@ -55,7 +63,11 @@ seed.get('/', (req, res) => {
       recycleInfoTwo: 'Contact your local recycling company for more info',
       productExamples: 'shopping bags, highly-resistant sacks, crushed bottles',
       recycledExamples: 'floor tiles, shipping envelopes',
-      recycleImages: []
+      extraInfoPartOne: String,
+      extraInfoPartTwo:  String,
+      percentRecycled2015: Number,
+      howToDetail: String,
+      randomFactoid: String
     },
     {
       recycleNumber: '5',    //-------- FIVE
@@ -67,7 +79,11 @@ seed.get('/', (req, res) => {
       recycleInfoTwo: 'Contact your local recycling company for more info',
       productExamples: 'furniture, luggage, toys',
       recycledExamples: 'ketchup bottles, medicine bottles',
-      recycleImages: []
+      extraInfoPartOne: String,
+      extraInfoPartTwo:  String,
+      percentRecycled2015: Number,
+      howToDetail: String,
+      randomFactoid: String
     },
     {
       recycleNumber: '6',    //-------- SIX
@@ -79,7 +95,11 @@ seed.get('/', (req, res) => {
       recycleInfoTwo: 'Contact your local recycling company for more info',
       productExamples: 'refrigerator trays, cosmetic bags, costume jewelry, CD cases',
       recycledExamples: 'make egg cartons, take-out containers, rulers',
-      recycleImages: []
+      extraInfoPartOne: String,
+      extraInfoPartTwo:  String,
+      percentRecycled2015: Number,
+      howToDetail: String,
+      randomFactoid: String
     },
     {
       recycleNumber: '7',    //-------- SEVEN
@@ -91,7 +111,11 @@ seed.get('/', (req, res) => {
       recycleInfoTwo: 'Contact your local recycling company for more info',
       productExamples: 'fiberglass, nylon, acrylic',
       recycledExamples: '',
-      recycleImages: []
+      extraInfoPartOne: String,
+      extraInfoPartTwo:  String,
+      percentRecycled2015: Number,
+      howToDetail: String,
+      randomFactoid: String
     }
   ], (err, data) => {
     if(err) {
