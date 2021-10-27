@@ -57,17 +57,17 @@ seed.get('/', (req, res) => {
       recycleNumber: '4',    //-------- FOUR
       recycleCode: 'LDPE',
       plasticName: 'low-density polyethylene',
-      generalDescription: 'General description 4',
-      canRecycle: 'No',
-      recycleInfoOne: 'This type of plastic is not usually recycled',
-      recycleInfoTwo: 'Contact your local recycling company for more info',
-      productExamples: 'shopping bags, highly-resistant sacks, crushed bottles',
-      recycledExamples: 'floor tiles, shipping envelopes',
-      extraInfoPartOne: String,
-      extraInfoPartTwo:  String,
-      percentRecycled2015: Number,
-      howToDetail: String,
-      randomFactoid: String
+      generalDescription: 'Low-density polyethylene has a high degree of branching in the molecular structure, which means that the polymer has a lower density and greater flexibility.',
+      canRecycle: 'Maybe.',
+      recycleInfoOne: 'Plastic #4 Is not normal recycled through standard recycling programs. However, many supermarkets collect thin plastic #4, like shopping bags and cling film.',
+      recycleInfoTwo: 'Like number 3, LDPE is not usually recycled. However, contact your curbside recycle program or local recycling center to find out if they accept number 4 recycling.',
+      productExamples: ['shopping bags', 'squeezable bottles', 'carpet', 'furniture', 'clothing', 'tot bags dry cleaning bags', 'frozen foods', 'bread bags'],
+      recycledExamples: ['Trash can liners and cans', 'compost bins', 'shipping envelopes', 'paneling', 'lumber', 'landscaping ties', 'floor tile'],
+      extraInfoPartOne: 'LDPE is considered less toxic than other plastics, and relatively safe for use. It is not commonly recycled, however, although this is changing in many communities today as more plastic recycling programs gear up to handle this material. When recycled, LDPE plastic is used for plastic lumber, landscaping boards, garbage can liners and floor tiles. Products made using recycled LDPE are not as hard or rigid as those made using recycled HDPE plastic.',
+      extraInfoPartTwo:  'Most recycling centers do not accept LDPE. To recycle LDPE made items such as grocery store shopping or produce bags you need to take them to a location that accepts them Fortunately most grocers will take them.',
+      percentRecycled2015: 6.2,
+      howToDetail: 'LDPE is not often recycled through curbside programs, but some communities might accept it. That means anything made with LDPE (like toothpaste tubes) can be thrown in the trash. Just like we mentioned under HDPE, plastic shopping bags can often be returned to stores for recycling.',
+      randomFactoid: 'Plastic accounts for roughly 12% of the total municipal solid waste in the US.'
     },
     {
       recycleNumber: '5',    //-------- FIVE
