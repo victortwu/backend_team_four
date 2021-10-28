@@ -3,7 +3,7 @@ const { Schema, model } = mongoose
 
 
 const factoidSchema = new Schema({
-  factoids: [],
+  factoid: String,
 })
 
 
