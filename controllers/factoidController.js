@@ -44,6 +44,16 @@ factoid.get('/', (req, res)=> {
   })
 })
 
+factoid.get('/:id', (req, res) => {
+  Factoids.findById(req.params.id, (err, foundFactoid) => {
+    if (err) {
+      res.status(400).json(err)
+    } else {
+      res.status(200).json(foundFactoid)
+    }
+  })
+})
+
 
 factoid.post('/', (req, res)=> {
   Factoids.create(req.body, (err,createdFactoid) => {
