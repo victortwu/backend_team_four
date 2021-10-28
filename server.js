@@ -67,6 +67,9 @@ app.use('/locations',locationController)
 const plasticTypeSeedData = require('./controllers/plasticTypeSeedData')
 app.use('/seed', plasticTypeSeedData)
 
+const factoidController = require('./controllers/factoidController')
+app.use('/factoid', factoidController)
+
 
 
 
