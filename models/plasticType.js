@@ -9,13 +9,12 @@ const plasticTypeSchema = new Schema({
   canRecycle: String,
   recycleInfoOne: String,
   recycleInfoTwo: String,
-  productExamples: [], // <--- should be an array in the future
-  recycledExamples: [], // <--- should be an array in the future
+  productExamples: [], 
+  recycledExamples: [],
   extraInfoPartOne: String,
   extraInfoPartTwo:  String,
   percentRecycled2015: Number,
   howToDetail: String,
-  randomFactoid: String
 })
 
 const PlasticType = model('PlasticType', plasticTypeSchema)

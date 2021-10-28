@@ -2,7 +2,7 @@ const express = require('express')
 const seed = express.Router()
 const PlasticType = require('../models/plasticType.js')
 
-// credit: acme plastics.com
+
 seed.get('/', (req, res) => {
   PlasticType.create([
     {
@@ -19,7 +19,6 @@ seed.get('/', (req, res) => {
       extraInfoPartTwo:  'Even as desirable PETE is to reclylering facilities, those that are sorted out of curbside streams are difficult to recycle. They are contaminated with food and grime. Not all plastics with the same name and number are actually the same: the PETE used in a takeout container is different from that used in a water bottle. For all these reasons, plastics are usually downcycled into applications with less-exacting specifications than what the virgin materials were designed for. A soda bottle doesn’t become a soda bottle again; it is made into a carpet or a fleece vest. In its next incarnation, the milk jug becomes the inner layer of a detergent bottle.',
       percentRecycled2015: 18.4,
       howToDetail: "PET or PETE can be picked up through most curbside recycling programs as long as it's been emptied and rinsed of any food. The plastic caps to your plastic bottle, since they're usually made of a different type of plastic, are ussually discarded to the trash. Check with municipality as sometimes they says you can throw caps in the recycle bin it is . There's no need to remove bottle labels because the recycling process separates them.",
-      randomFactoid: 'Recycling 10 plastic bottles saves enough energy to power a laptop for more than 25 hours, according to the EPA.',
     },
     {
       recycleNumber: '2',    //-------- TWO
@@ -35,7 +34,6 @@ seed.get('/', (req, res) => {
       extraInfoPartTwo:  'HDPE plastic is very hard-wearing and does not break down under exposure to sunlight or extremes of heating or freezing. For this reason, HDPE is used to make picnic tables, plastic lumber, waste bins, park benches, bed liners for trucks and other products which require durability and weather-resistance.',
       percentRecycled2015: 10.3,
       howToDetail: "HDPE can often be picked up through most curbside recycling programs, although some allow only containers with necks. Flimsy plastics (like grocery bags and plastic wrap) usually can't be recycled, but some stores will collect and recycle them.",
-      randomFactoid: 'Only 8% of discarded plastics were recycled in 2017, according to the EPA.'
     },
     {
       recycleNumber: '3',    //-------- THREE
@@ -51,7 +49,6 @@ seed.get('/', (req, res) => {
       extraInfoPartTwo:  "Products made using PVC plastic are not recyclable. While some PCV products can be repurposed, PVC products should not be reused for applications with food or for children’s use.",
       percentRecycled2015: 0,
       howToDetail: "PVC and Vinyl can rarely be recycled, but it's accepted by some plastic lumber makers. If you need to dispose of either material, ask your local waste management to see if you should put it in the trash or drop it off at a collection center.",
-      randomFactoid: 'According to the National Waste & Recycling Association, 25% of what ends up in recycling bins is contaminated and must be thrown out.'
     },
     {
       recycleNumber: '4',    //-------- FOUR
@@ -67,7 +64,6 @@ seed.get('/', (req, res) => {
       extraInfoPartTwo:  'Most recycling centers do not accept LDPE. To recycle LDPE made items such as grocery store shopping or produce bags you need to take them to a location that accepts them Fortunately most grocers will take them.',
       percentRecycled2015: 6.2,
       howToDetail: 'LDPE is not often recycled through curbside programs, but some communities might accept it. That means anything made with LDPE (like toothpaste tubes) can be thrown in the trash. Just like we mentioned under HDPE, plastic shopping bags can often be returned to stores for recycling.',
-      randomFactoid: 'Plastic accounts for roughly 12% of the total municipal solid waste in the US.'
     },
     {
       recycleNumber: '5',    //-------- FIVE
@@ -77,13 +73,12 @@ seed.get('/', (req, res) => {
       canRecycle: 'Maybe.',
       recycleInfoOne: 'Plastic #5 Is not normal recycled through standard recycling programs, though this is changing in some location.',
       recycleInfoTwo: "PP is also rarely recycled but is accepted by some curbside recycling. Check out your municipality's website to find out if they accept number 5.",
-      productExamples: ['medicine bottles', 'straws', 'bottle caps', 'ketchup' 'bottles and syrup bottles', 'some yogurt containers'],
+      productExamples: ['medicine bottles', 'straws', 'bottle caps', 'ketchup', 'bottles and syrup bottles', 'some yogurt containers'],
       recycledExamples: ['Signal lights', 'battery cables', 'brooms', 'brushes', 'auto battery cases', 'ice scrapers', 'landscape borders', 'bicycle racks', 'rakes', 'bins', 'pallets', 'trays'],
       extraInfoPartOne: "Polypropylene is recyclable through some curbside recycling programs, but only about 3% of PP products are currently being recycled in the US. Recycled PP is used to make landscaping border stripping, battery cases, brooms, bins and trays. However, #5 plastic is today becoming more accepted by recyclers.",
       extraInfoPartTwo:  "PP is considered safe for reuse. To recycle products made from PP, check with your local curbside program to see if they are now accepting this material.",
       percentRecycled2015: .9,
       howToDetail: "PP can be recycled through some curbside programs, just don't forget to make sure there's no food left inside. It's best to throw loose caps into the garbage since they easily slip through screens during recycling and end up as trash anyways.",
-      randomFactoid: 'Plastic takes hundreds of years to decompose'
     },
     {
       recycleNumber: '6',    //-------- SIX
@@ -99,7 +94,6 @@ seed.get('/', (req, res) => {
       extraInfoPartTwo: '',
       percentRecycled2015: 1.3,
       howToDetail: "Not many curbside recycling programs accept PS in the form of rigid plastics (and many manufacturers have switched to using PET instead). Since foam products tend to break apart into smaller pieces, you should place them in a bag, squeeze out the air, and tie it up before putting it in the trash to prevent pellets from dispersing.",
-      randomFactoid: 'Only 9% of plastic is recycled, according to National Geographic.'
     },
     {
       recycleNumber: '7',    //-------- SEVEN
@@ -115,7 +109,6 @@ seed.get('/', (req, res) => {
       extraInfoPartTwo:  'Some Polycarbonates are made from bio-based polymers like corn starch and are compostable. Look for "PLA" or "Compostable" near the recycle logo. These items are also not recuclable but can be thrown into your composting bin.',
       percentRecycled2015: 0,
       howToDetail: "These other plastics are traditionally not recycled, so don't expect your local provider to accept them. The best option is to consult your municipality's website for specific instructions.",
-      randomFactoid: 'According to a United Nations report, more than 220 million tons of plastic are produced each year.'
     }
   ], (err, data) => {
     if(err) {
