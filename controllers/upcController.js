@@ -14,6 +14,9 @@ upc.get('/:code', async(req, res) => {
 
         // axios.get(upcBaseURL + query + upcApiKey)
         axios.get(upcEarth911URL + query + upcEarthApiKey)
+
+        // trying this one out because it has actual data
+        axios.get('https://api.upcitemdb.com/prod/trial/lookup?upc=' + query)
         .then(res => {
           console.log(res)
           return res.data
