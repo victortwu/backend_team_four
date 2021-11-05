@@ -3,16 +3,18 @@ const locations = express.Router()
 const axios = require('axios')
 
 const locationEarth911URL = process.env.LOCATIONS_EARTHURL
-const upcEarthApiKey = '&api_key=' + process.env.RECYCLE_APIKEY
+const upcEarthApiKey = 'api_key=' + process.env.RECYCLE_APIKEY
 
-locations.get('/:latitude/:longitude/:materials', async(req, res) => {
+locations.get('/:latitude/:longitude/', async(req, res) => {
       try{
 
         const latitude = req.params.latitude
         const longitude = req.params.longitude
-        const materials = req.params.materials
+        //const materials = req.params.materials
 
-        axios.get(locationEarth911URL +`latitude=${latitude}&longitude=${longitude}&max_distance=25`+upcEarthApiKey)
+        //reconfigured the string, was getting a 404 until I put the api key right after the ? at the end of the base url
+
+        axios.get(`${locationEarth911URL}${upcEarthApiKey}&latitude=${latitude}&longitude=${longitude}&max_distance=5`)
         .then(res => {
           console.log(res)
           return res.data
