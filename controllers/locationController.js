@@ -12,9 +12,12 @@ locations.get('/:latitude/:longitude/', async(req, res) => {
         const longitude = req.params.longitude
         //const materials = req.params.materials
 
+        console.log('PARAM 1: ', latitude)
+        console.log('PARAM 2: ', longitude)
+
         //reconfigured the string, was getting a 404 until I put the api key right after the ? at the end of the base url
 
-        axios.get(`${locationEarth911URL}${upcEarthApiKey}&latitude=${latitude}&longitude=${longitude}&max_distance=5`)
+        axios.get(`${locationEarth911URL}${upcEarthApiKey}&max_distance=5&latitude=${latitude}&longitude=${longitude}`)
         .then(res => {
           console.log(res)
           return res.data
